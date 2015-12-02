@@ -13,3 +13,36 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+	padding: 65px 10px;
+	/*background-color: #59656F;*/
+}
+
+h1 {
+	padding-top: 40px;
+	text-align: center;
+}
+
+h4 {
+	text-align: center;
+	padding-bottom: 150px;
+
+}
+
+/*.allblocks {
+	margin: auto;
+	width: 100%;
+}*/
+.blocks {
+	/*position: absolute;*/
+	background-color: #088da5;
+	width: 30%;
+	margin: 1.5%;
+	min-height: 300px;
+	display: inline-block;
+}
+
+.blocks .h5 {
+	vertical-align: bottom;
+}

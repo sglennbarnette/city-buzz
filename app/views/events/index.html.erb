@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<h1>The City Buzz</h1>
+<h4>Event Feed</h4>
+
+
+<!-- <div class="row"> -->
+<div class="allblocks">
+	<% @events.reverse_each do |event| %>
+		<div class="panel blocks">
+			<div class="panel-heading">
+				<h3><%= event.message %></h3>
+			</div>
+			<div class="panel-body">
+				<h5>by user number <%= event.user_id %></h5>
+			</div>
+		</div>
+	<!-- </div> -->
+	<% end %>
+</div>
