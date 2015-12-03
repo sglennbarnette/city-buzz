@@ -33,7 +33,9 @@
   <% if user_signed_in? %>
   <div class="collapse navbar-collapse" >
       <ul class="nav navbar-nav">
+        <li><%= link_to 'My Profile', profile_path(current_user) %></li>
       	<li><%= link_to 'New Event', new_event_path %></li>
+        <li><%= link_to 'All Users', profiles_path %></li>
       </ul>
   </div><!-- /.navbar-collapse -->
   <% end %>
