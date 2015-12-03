@@ -12,7 +12,7 @@
 				<h3><%= event.message %></h3>
 			</div>
 			<div class="panel-body">
-				<h5>by user number <%= event.user_id %></h5>
+				<h5>by <%= link_to event.user.username, profile_path(event.user) %></h5>
 			</div>
 		</div>
 	<!-- </div> -->
