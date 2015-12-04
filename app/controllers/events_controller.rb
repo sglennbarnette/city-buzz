@@ -8,6 +8,7 @@ before_action :set_event, only: [:show, :edit, :update, :destroy]
   end
 
   def show
+    # @event = Event.find(params[:id])
   end
 
   def edit
@@ -56,7 +57,7 @@ def set_event
 end
 
 def event_params
-  params.require(:event).permit(:message, :user_id)
+  params.require(:event).permit(:message, :user_id, :image)
 end
 
 

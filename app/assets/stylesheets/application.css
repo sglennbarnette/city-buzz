@@ -19,6 +19,10 @@ body {
 	/*background-color: #59656F;*/
 }
 
+a {
+	color: #000000;
+}
+
 h1 {
 	padding-top: 40px;
 	text-align: center;
@@ -41,6 +45,7 @@ h4 {
 	margin: 1.5%;
 	min-height: 300px;
 	display: inline-block;
+	vertical-align: top;
 }
 
 .blocks .h5 {
