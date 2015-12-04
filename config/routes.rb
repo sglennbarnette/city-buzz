@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   get 'profiles/:id' => 'profiles#show', as: :profile
+  # get 'events/:id' => 'events#show, as: :event
+  # get 'events/:id' => 'events#new', as: :event
 
   get 'profiles' => 'profiles#index'
 
@@ -8,15 +10,15 @@ Rails.application.routes.draw do
 
   # get 'profiles/index'
 
-  get 'events/index'
+  # get 'events/index'
 
-  get 'events/show'
+  # get 'events/:id' => 'events#show'
 
-  get 'events/edit'
+  # get 'events/:id' => 'events#edit'
 
-  get 'events/new'
+  # get 'events/new'
 
-  get 'events/_form'
+  # get 'events/_form'
 
   resources :events
 

@@ -9,10 +9,12 @@
 	<% @events.reverse_each do |event| %>
 		<div class="panel blocks">
 			<div class="panel-heading">
-				<h3><%= event.message %></h3>
+				<h5><%= link_to event.user.username, profile_path(event.user) %></h5>
 			</div>
 			<div class="panel-body">
-				<h5>by <%= link_to event.user.username, profile_path(event.user) %></h5>
+				<h3><%= event.message %></h3>
+				<%= image_tag event.image(:thumb) %><br>
+				<%= link_to "More info", event_path(event) %>
 			</div>
 		</div>
 	<!-- </div> -->

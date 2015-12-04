@@ -1,2 +1,8 @@
-<h1>Events#show</h1>
-<p>Find me in app/views/events/show.html.erb</p>
+<h1> <%= @event.user.username %> </h1>
+<%= image_tag @event.image(:medium) %>
+<h3><%= @event.message %></h3>
+
+
+<% if current_user.id == @event.user_id %>
+<%= link_to "Edit this event", edit_event_path(@event) %> <br>
+<% end %>
