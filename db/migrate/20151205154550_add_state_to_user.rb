@@ -1,5 +1,5 @@
 class AddStateToUser < ActiveRecord::Migration
   def change
-    add_column :users, :business, :boolean
+    add_column :users, :state, :string
   end
 end

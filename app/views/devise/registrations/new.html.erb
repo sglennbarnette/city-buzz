@@ -44,8 +44,10 @@
   </div>
 
   <div class="field">
-    <%= check_box_tag(:business) %>
-    <%= label_tag(:business, "I am a local business") %>
+    <%= f.radio_button(:status, "customer") %>
+    <%= f.label(:status_customer, "I am a loyal customer to local businesses") %><br>
+    <%= f.radio_button(:status, "business") %>
+    <%= f.label(:status_business, "I am a local business owner") %>
   </div>
 
   <div class="field">
