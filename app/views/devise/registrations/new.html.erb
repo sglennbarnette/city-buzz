@@ -19,6 +19,11 @@
   </div>
 
   <div class="field">
+    <%= f.label :avatar %><br>
+    <%= f.file_field :avatar %>
+  </div>
+
+  <div class="field">
     <%= f.label :address %><br />
     <%= f.text_field :address %>
   </div>
@@ -36,6 +41,11 @@
   <div class="field">
     <%= f.label :description %><br />
     <%= f.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= check_box_tag(:business) %>
+    <%= label_tag(:business, "I am a local business") %>
   </div>
 
   <div class="field">

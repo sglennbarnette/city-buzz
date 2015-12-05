@@ -4,7 +4,8 @@
 <h3>Address: <%= @user.address %></h3>
 <h3>City: <%= @user.city %> </h3>
 <h3>Hours: <%= @user.hours %></h3>
-<h3>Description: <%= @user.description %></h4>
+<h3>Description: <%= @user.description %></h3>
+<h3>Business: <%= @user.business %></h3>
 
 <% if current_user.id == @user.id %>
 <%= link_to "Edit my profile", edit_user_registration_path %>
