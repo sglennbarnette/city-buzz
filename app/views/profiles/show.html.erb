@@ -1,11 +1,33 @@
-<h1> <%= @user.name %> </h1>
-<%= image_tag @user.avatar(:medium) %>
-<h3>Username: <%= @user.username %></h3>
-<h3>Address: <%= @user.address %></h3>
-<h3>City: <%= @user.city %> </h3>
-<h3>Hours: <%= @user.hours %></h3>
-<h3>Description: <%= @user.description %></h3>
-<h3>Business: <%= @user.status %></h3>
+<center><%= image_tag @user.avatar(:thumb) %></center>
+<h1> <%= @user.username %> </h1>
+<center><%= @user.description %></center>
+<p><%= @user.address %></p>
+<p><%= @user.email %></p>
+<p><%= @user.city %> </p>
+<p>Hours: <%= @user.hours %></p>
+
+<p>Business: <%= @user.status %></p>
+
+<% if @user.status == 'business' %>
+	<h3>Recent Posts:</h3>
+	<div class="allblocks">
+		<% @user.events.reverse_each do |event| %>
+			<div class="panel blocks">
+				<div class="panel-heading">
+					<h5><%= link_to event.user.username, profile_path(event.user) %></h5>
+				</div>
+				<div class="panel-body">
+					<h3><%= event.message %></h3>
+					<%= image_tag event.image(:thumb) %><br>
+					<%= link_to "More info", event_path(event) %>
+				</div>
+			</div>
+		<% end %>
+	</div>
+<% end %>
+<% if @user.status == 'customer' %>
+		<h3>Recent Favorites:</h3>
+<% end %>
 
 <% if current_user.id == @user.id %>
 <%= link_to "Edit my profile", edit_user_registration_path %>
