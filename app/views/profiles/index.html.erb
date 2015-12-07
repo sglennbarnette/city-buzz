@@ -1,6 +1,24 @@
 <h1>All User Profiles</h1>
 
+
+<h2>Local Businesses:</h2>
 <% @users.each do |user| %>
-	<big><%= link_to user.name, profile_path(user) %></big>
-	<br>
+<% if user.status == 'business' %>
+<div class="grid">
+	<%= image_tag user.avatar(:thumb) %>
+	<h3><%= link_to user.username, profile_path(user) %></h3>
+</div>
+<% end %>
+<% end %>
+
+
+
+<h2>Locavores:</h2>
+<% @users.each do |user| %>
+<% if user.status == 'customer' %>
+<div class="grid">
+	<%= image_tag user.avatar(:thumb) %>
+	<h3><%= link_to user.username, profile_path(user) %></h3>
+</div>
+<% end %>
 <% end %>

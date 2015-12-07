@@ -8,7 +8,7 @@
     <%= f.email_field :email, autofocus: true %>
   </div>
 
-  <div class="field">
+<div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>
@@ -24,28 +24,15 @@
   </div>
 
   <div class="field">
-    <%= f.label :address %><br />
-    <%= f.text_field :address %>
-  </div>
-
-  <div class="field">
     <%= f.label :city %><br />
     <%= f.text_field :city %>
   </div>
 
   <div class="field">
-    <%= f.label :hours %><br />
-    <%= f.text_area :hours %>
-  </div>
-
-  <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
-  </div>
-
-  <div class="field">
-    <%= check_box_tag(:business) %>
-    <%= label_tag(:business, "I am a local business") %>
+    <%= f.radio_button(:status, "customer") %>
+    <%= f.label(:status_customer, "I am a loyal customer to local businesses") %><br>
+    <%= f.radio_button(:status, "business") %>
+    <%= f.label(:status_business, "I am a local business owner") %>
   </div>
 
   <div class="field">
