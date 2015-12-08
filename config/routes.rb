@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
-  get 'profiles/:id' => 'profiles#show', as: :profile
+  
   # get 'events/:id' => 'events#show, as: :event
   # get 'events/:id' => 'events#new', as: :event
-
+  get 'profiles/:id' => 'profiles#show', as: :profile
   get 'profiles' => 'profiles#index'
+
+  devise_for :users
+
+  resources :events do
+    resource :like
+  end
 
 
   # get 'profiles/show'
@@ -20,9 +26,6 @@ Rails.application.routes.draw do
 
   # get 'events/_form'
 
-  resources :events
-
-  devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

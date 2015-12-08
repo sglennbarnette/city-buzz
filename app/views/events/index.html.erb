@@ -14,7 +14,14 @@
 			<div class="panel-body">
 				<h3><%= event.message %></h3>
 				<%= image_tag event.image(:thumb) %><br>
-				<%= link_to "More info", event_path(event) %>
+				<%= link_to "More info", event_path(event) %><br>
+				<% if current_user.likes?(event) %>
+ 					<%= link_to "Unlike", event_like_path(event), method: :delete %>
+				<% else %>
+					<%= link_to "Like", event_like_path(event), method: :post %>
+				<% end %>
+				<br>
+				<%= event.likes.count %> Users like this!<br>
 			</div>
 		</div>
 	<!-- </div> -->
