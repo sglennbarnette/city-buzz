@@ -1,6 +1,8 @@
 <h1> <%= @event.user.username %> </h1>
 <%= image_tag @event.image(:medium) %>
 <h3><%= @event.message %></h3>
+<p><%= @event.id %></p>
+<%= render "shared/likes" %>
 
 
 <% if current_user.id == @event.user_id %>
